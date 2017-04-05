@@ -53,7 +53,6 @@ public class TimeTests {
 		
 		System.out.println(p2.plus(p2).plusDays(2));
 		
-		System.out.println(Period.ofWeeks(45));
 		
 		Duration duration = Duration.of(20, ChronoUnit.HALF_DAYS);
 		System.out.println(duration.plusSeconds(38));
@@ -69,7 +68,19 @@ public class TimeTests {
 		System.out.println(ZonedDateTime.now().toInstant());
 		System.out.println(LocalDateTime.now());
 		
-		System.out.println(localDate.format(DateTimeFormatter.ISO_LOCAL_TIME));
+//		System.out.println(localDate.format(DateTimeFormatter.ISO_LOCAL_TIME));
+		
+		String m1 = Duration.of(70, ChronoUnit.MINUTES).toString();
+		String m2 = Duration.ofMinutes(70).toString();
+		String s = Duration.of(70, ChronoUnit.SECONDS).toString();
+		
+		System.out.println(m1 + " " + m2 + " " + s);
+		
+		System.out.println(Period.ofWeeks(45));
+		System.out.println(Period.ofMonths(60));
+		System.out.println(Duration.ofMinutes(70));
+		
+		Instant.ofEpochSecond(6000);
 	}
 
 }
