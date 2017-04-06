@@ -15,6 +15,9 @@ import java.time.temporal.ChronoUnit;
 
 public class TimeTests {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		System.out.println(ZonedDateTime.now());
 		
@@ -81,6 +84,21 @@ public class TimeTests {
 		System.out.println(Duration.ofMinutes(70));
 		
 		Instant.ofEpochSecond(6000);
+		
+		LocalDate l1 = LocalDate.of(2015, 3, 20);
+		LocalDate l2 = LocalDate.of(2015, 2, 20);
+		System.out.println(Period.between(l1, l2));
+		
+		LocalTime t1 = LocalTime.of(10, 00);
+		LocalTime t2 = LocalTime.of(2, 00);
+		System.out.println(Duration.between(t1, t2));
+		
+		
+		LocalDateTime ldz1 = LocalDateTime.of(2015, Month.MARCH, 8, 2, 0); 
+		ZonedDateTime zd1 = ZonedDateTime.of(ldz1, ZoneId.of("US/Eastern")); 
+		LocalDateTime ldz2 = LocalDateTime.of(2015, Month.MARCH, 8, 3, 0); 
+		ZonedDateTime zd2 = ZonedDateTime.of(ldz2, ZoneId.of("US/Eastern")); 
+		long x = ChronoUnit.HOURS.between(zd1, zd2); System.out.println(x);
 	}
 
 }
