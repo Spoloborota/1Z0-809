@@ -1,12 +1,27 @@
 package com.spoloborota.ocp.exceptions;
 
-public class Parent {
-	
-	void doSmth() {}
+import java.sql.SQLException;
 
-	class Child extends Parent{
+public class Parent {
+	void doSmth() {}
+	void doSmthExc() throws SQLException {}					//checked
+	void doSmthRuntExc() throws IllegalStateException {}	//unchecked
+
+	class Child extends Parent {
+//		void doSmth() throws SQLException {}				//checked
+		void doSmthExc() {}
+		void doSmthRuntExc() {}
+	}
+	
+	class Child2 extends Parent {
+		void doSmth() throws IllegalStateException {}		//unchecked
+//		void doSmthExc() throws Exception {}				//checked parent
+		void doSmthRuntExc() throws RuntimeException {}		//unchecked parent
+	}
+	
+	class Child3 extends Parent {
 		
-		@Override
-		void doSmth() throws NullPointerException {}
+		void doSmthExc() throws IllegalStateException {}		//checked
+//		void doSmthRuntExc() throws SQLException {}				//unchecked
 	}
 }
