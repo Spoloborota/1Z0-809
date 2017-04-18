@@ -1,6 +1,28 @@
 package com.spoloborota.ocp.innernested;
 
 public class Outer {
+	
+	
+	private void Outer() { }
+	protected class Inner {
+		public Inner () {}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private int length = (int) System.currentTimeMillis();
 	public void calculate() {
 		int width = length;

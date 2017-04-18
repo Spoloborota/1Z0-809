@@ -7,9 +7,9 @@ public class AssertTest {
 		assert numGuests > 0 : "XXX";
 		System.out.println(numGuests);
 	}
-	
+
 	int addPlusOne (int a, int b) {
-//		boolean assert = false;
+		//		boolean assert = false;
 		assert a++ > 0;
 		assert b > 0;
 		return a + b;
