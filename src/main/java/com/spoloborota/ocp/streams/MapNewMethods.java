@@ -1,4 +1,4 @@
-package com.spoloborota.ocp.lambdas.streams;
+package com.spoloborota.ocp.streams;
 
 import java.util.HashMap;
 import java.util.Map;

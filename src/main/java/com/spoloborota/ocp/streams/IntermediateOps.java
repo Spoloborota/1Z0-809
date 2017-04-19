@@ -1,4 +1,4 @@
-package com.spoloborota.ocp.lambdas.streams;
+package com.spoloborota.ocp.streams;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;

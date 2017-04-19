@@ -10,6 +10,11 @@ public class Relativiiizzz {
         Path p2 = Paths.get("/a/b/c/d");
         Path p3 = p1.relativize(p2);
         System.out.println(p3);
+        
+        p1 = Paths.get("/a/b/c/d");
+        p2 = Paths.get("/a/b");
+        p3 = p1.relativize(p2);
+        System.out.println(p3);
 
 	}
 

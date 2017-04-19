@@ -1,4 +1,4 @@
-package com.spoloborota.ocp.lambdas.locale;
+package com.spoloborota.ocp.localization;
 
 import java.util.Locale;
 
