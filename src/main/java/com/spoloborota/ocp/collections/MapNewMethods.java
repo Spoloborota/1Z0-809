@@ -1,4 +1,4 @@
-package com.spoloborota.ocp.streams;
+package com.spoloborota.ocp.collections;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +32,10 @@ public class MapNewMethods {
 		BiFunction<Integer, Integer, Integer> merge = (v1, v2) -> v1 < v2 ? v2 : v1;
 		map.merge("ZZZx", new Integer(4), merge);
 		System.out.println(map);
+		
+		
+		
+//		map.forEach(action);
 		
 //		map.compute("XXX", (k, v) -> {
 //			if (((Integer)v) == 20) {

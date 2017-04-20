@@ -10,20 +10,31 @@ public class Resolviiiing {
         Path p2 = Paths.get("/a/b");
         Path p3 = p1.resolve(p2);
         System.out.println(p3);
+        p3 = p1.resolveSibling(p2);
+        System.out.println(p3);
+        System.out.println();
         
         p1 = Paths.get("/a/b");
         p2 = Paths.get("/a/b/c/d");
         p3 = p1.resolve(p2);
         System.out.println(p3);
+        p3 = p1.resolveSibling(p2);
+        System.out.println(p3);
+        System.out.println();
 
         p1 = Paths.get("a/b/c/d");
         p2 = Paths.get("/a/b");
         p3 = p1.resolve(p2);
         System.out.println(p3);
+        p3 = p1.resolveSibling(p2);
+        System.out.println(p3);
+        System.out.println();
 
         p1 = Paths.get("/a/b/c/d");
         p2 = Paths.get("../a/b");
         p3 = p1.resolve(p2);
+        System.out.println(p3);
+        p3 = p1.resolveSibling(p2);
         System.out.println(p3);
 	}
 
